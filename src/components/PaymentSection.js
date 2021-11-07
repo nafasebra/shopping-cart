@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CardTable() {
+export default function PaymentSection() {
     return (
         <div>
             
