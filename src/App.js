@@ -1,13 +1,13 @@
 import React from 'react'
 
 // import components
-import CardSection from './components/CardSection';
+import CartSection from './components/CartSection';
 import PaymentSection from './components/PaymentSection';
 
 export default function App() {
     return (
         <div className="app">
-            <CardSection />
+            <CartSection />
             <PaymentSection />
         </div>
     )

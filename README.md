@@ -1,4 +1,4 @@
-## Shopping card
+## Shopping cart
 
 Designed image : https://www.behance.net/gallery/57779427/Shopping-Cart-UI
 

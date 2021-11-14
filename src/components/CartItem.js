@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function CardTable() {
+export default function CartItem() {
     return (
-        <div>
+        <div className="cart__item">
             
         </div>
     )
