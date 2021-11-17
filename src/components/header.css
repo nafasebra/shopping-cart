@@ -1,0 +1,8 @@
+.header{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.app-header{
+    font-weight: 200;
+}

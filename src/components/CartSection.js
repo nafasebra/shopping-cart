@@ -6,7 +6,7 @@ import CartTable from './CartTable';
 import Footer from './Footer';
 
 // import the style of this component
-import './cardSection.css';
+import './cartSection.css';
 
 export default function CartSection() {
     return (
