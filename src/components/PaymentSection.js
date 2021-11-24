@@ -21,7 +21,7 @@ function PaymentSection() {
                             </li>
                             <li className={`bank-account__item ${bankAccount === 'mastercard' && "active"}`}
                                 onClick={() => setBankAccount('mastercard')}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="2.11676in" height="1.5in" viewBox="0 0 152.407 108">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152.407 108">
                                     <rect x="60.4117" y="25.6968" width="31.5" height="56.6064" fill="currentColor"/>
                                     <path d="M382.20839,306a35.9375,35.9375,0,0,1,13.7499-28.3032,36,36,0,1,0,0,56.6064A35.938,35.938,0,0,1,382.20839,306Z" transform="translate(-319.79649 -252)" fill="currentColor"/>
                                     <path d="M454.20349,306a35.99867,35.99867,0,0,1-58.2452,28.3032,36.00518,36.00518,0,0,0,0-56.6064A35.99867,35.99867,0,0,1,454.20349,306Z" transform="translate(-319.79649 -252)" fill="currentColor"/>
@@ -49,14 +49,16 @@ function PaymentSection() {
                         <label htmlFor="cardNumber">Card Number</label>
                         <input type="text" id="cardNumber" />
                     </div>
-                    <div className="two-col__section">
+                    <div className="row">
                         <div className="two-col__item form-control">
                             <label htmlFor="year">Expiry Date</label>
-                            <input type="text" id="year" />
-                            <span>/</span>
-                            <input type="text" id="month" />
-                            <span>/</span>
-                            <input type="text" id="day" />
+                            <div className="date__input">
+                                <input type="text" id="year" />
+                                <span>/</span>
+                                <input type="text" id="month" />
+                                <span>/</span>
+                                <input type="text" id="day" />
+                            </div>
                         </div>
                         <div className="two-col__item form-control">
                             <label htmlFor="cvv" >CVV</label>

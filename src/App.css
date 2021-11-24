@@ -15,6 +15,7 @@ input{
   background-color: transparent;
   border: none;
   padding: 0.75rem 0.5rem;
+  width: 100%;
 }
 button{
   border: none;

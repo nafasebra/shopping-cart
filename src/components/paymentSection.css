@@ -10,6 +10,7 @@
     height: 100vh;
     background-color: #493F3D;
     padding: 2rem 3rem;
+    color: #ffffff;
 }
 .bank-account__list{
     display: flex;
@@ -32,10 +33,40 @@
     width: 50px;
 }
 
+.row{
+    display: flex;
+    align-items: center;
+}
+.two-col__item{
+    margin: 0 0.5rem;
+}
 .form-control{
     display: flex;
     flex-direction: column;
 }
 .form-control input{
     border-bottom: 1px solid #ffffff;   
+}
+.date__input{
+    display: flex;
+    align-items: center;
+}
+.date__input span{
+    margin: 1rem 1.2rem 0;
+}
+label{
+    padding: 1rem 0;
+}
+
+.payment__button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1.7rem 0;
+    background-color: #F1C40F;
+    color: #353535;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
