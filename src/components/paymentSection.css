@@ -7,8 +7,17 @@
     align-items: center;
 }
 .bank-account__item{
+    color: #aaaaaa;
+    margin: 0.75rem;
+    transition: color 200ms;
+}
+.bank-account__item.active{
+    color: #ffffff;
+}
+.bank-account__item:hover{
+    cursor: pointer;
     color: #ffffff;
 }
 .bank-account__item svg{
-    width: 40px;
+    width: 50px;
 }

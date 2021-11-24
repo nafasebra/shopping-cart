@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // import the style of this component
 import './paymentSection.css';
 
-export default function PaymentSection() {
+function PaymentSection() {
+    const [ bankAccount, setBankAccount ] = useState('visa');
+
     return (
         <div className="payment__container">
             <div className="open-section"></div>
@@ -13,22 +15,21 @@ export default function PaymentSection() {
                     <div>
                         <p>Select Card Type</p>
                         <ul className="bank-account__list">
-                            <li className="bank-account__item">
+                            <li className={`bank-account__item ${bankAccount === 'visa' && "active"}`}
+                                onClick={() => setBankAccount('visa')}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.732 141.732"><g fill="currentColor"><path d="M62.935 89.571h-9.733l6.083-37.384h9.734zM45.014 52.187L35.735 77.9l-1.098-5.537.001.002-3.275-16.812s-.396-3.366-4.617-3.366h-15.34l-.18.633s4.691.976 10.181 4.273l8.456 32.479h10.141l15.485-37.385H45.014zM121.569 89.571h8.937l-7.792-37.385h-7.824c-3.613 0-4.493 2.786-4.493 2.786L95.881 89.571h10.146l2.029-5.553h12.373l1.14 5.553zm-10.71-13.224l5.114-13.99 2.877 13.99h-7.991zM96.642 61.177l1.389-8.028s-4.286-1.63-8.754-1.63c-4.83 0-16.3 2.111-16.3 12.376 0 9.658 13.462 9.778 13.462 14.851s-12.075 4.164-16.06.965l-1.447 8.394s4.346 2.111 10.986 2.111c6.642 0 16.662-3.439 16.662-12.799 0-9.72-13.583-10.625-13.583-14.851.001-4.227 9.48-3.684 13.645-1.389z"/></g><path d="M34.638 72.364l-3.275-16.812s-.396-3.366-4.617-3.366h-15.34l-.18.633s7.373 1.528 14.445 7.253c6.762 5.472 8.967 12.292 8.967 12.292z" fill="currentColor"/><path fill="none" d="M0 0h141.732v141.732H0z"/></svg>
                             </li>
-                            <li className="bank-account__item">
+                            <li className={`bank-account__item ${bankAccount === 'mastercard' && "active"}`}
+                                onClick={() => setBankAccount('mastercard')}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="2.11676in" height="1.5in" viewBox="0 0 152.407 108">
-                                    <g>
-                                        <g>
-                                            <rect x="60.4117" y="25.6968" width="31.5" height="56.6064" fill="currentColor"/>
-                                            <path d="M382.20839,306a35.9375,35.9375,0,0,1,13.7499-28.3032,36,36,0,1,0,0,56.6064A35.938,35.938,0,0,1,382.20839,306Z" transform="translate(-319.79649 -252)" fill="currentColor"/>
-                                            <path d="M454.20349,306a35.99867,35.99867,0,0,1-58.2452,28.3032,36.00518,36.00518,0,0,0,0-56.6064A35.99867,35.99867,0,0,1,454.20349,306Z" transform="translate(-319.79649 -252)" fill="currentColor"/>
-                                            <path d="M450.76889,328.3077v-1.1589h.4673v-.2361h-1.1901v.2361h.4675v1.1589Zm2.3105,0v-1.3973h-.3648l-.41959.9611-.41971-.9611h-.365v1.3973h.2576v-1.054l.3935.9087h.2671l.39351-.911v1.0563Z" transform="translate(-319.79649 -252)" fill="currentColor"/>
-                                        </g>
-                                    </g>
+                                    <rect x="60.4117" y="25.6968" width="31.5" height="56.6064" fill="currentColor"/>
+                                    <path d="M382.20839,306a35.9375,35.9375,0,0,1,13.7499-28.3032,36,36,0,1,0,0,56.6064A35.938,35.938,0,0,1,382.20839,306Z" transform="translate(-319.79649 -252)" fill="currentColor"/>
+                                    <path d="M454.20349,306a35.99867,35.99867,0,0,1-58.2452,28.3032,36.00518,36.00518,0,0,0,0-56.6064A35.99867,35.99867,0,0,1,454.20349,306Z" transform="translate(-319.79649 -252)" fill="currentColor"/>
+                                    <path d="M450.76889,328.3077v-1.1589h.4673v-.2361h-1.1901v.2361h.4675v1.1589Zm2.3105,0v-1.3973h-.3648l-.41959.9611-.41971-.9611h-.365v1.3973h.2576v-1.054l.3935.9087h.2671l.39351-.911v1.0563Z" transform="translate(-319.79649 -252)" fill="currentColor"/>
                                 </svg>
                             </li>
-                            <li className="bank-account__item">
+                            <li className={`bank-account__item ${bankAccount === 'verve' && "active"}`}
+                                onClick={() => setBankAccount('verve')}>
                                 <svg viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" >
                                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                         <g id="verve" fill-rule="nonzero">
@@ -66,3 +67,5 @@ export default function PaymentSection() {
         </div>
     )
 }
+
+export default PaymentSection;
