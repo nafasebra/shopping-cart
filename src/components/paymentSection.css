@@ -1,5 +1,15 @@
+.payment__container{
+    position: relative;
+    flex: 0 0 30%;
+    width: 30%;
+}
+.dot__button{
+    position: absolute;
+}
 .payment{
+    height: 100vh;
     background-color: #493F3D;
+    padding: 2rem 3rem;
 }
 .bank-account__list{
     display: flex;
@@ -20,4 +30,12 @@
 }
 .bank-account__item svg{
     width: 50px;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+}
+.form-control input{
+    border-bottom: 1px solid #ffffff;   
 }

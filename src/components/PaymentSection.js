@@ -8,7 +8,7 @@ function PaymentSection() {
 
     return (
         <div className="payment__container">
-            <div className="open-section"></div>
+            <div className="dote__button"></div>
             <div className="payment">
                 <div className="payment__body">
                     <h2 className="text-yellow">Card Details</h2>
@@ -31,8 +31,8 @@ function PaymentSection() {
                             <li className={`bank-account__item ${bankAccount === 'verve' && "active"}`}
                                 onClick={() => setBankAccount('verve')}>
                                 <svg viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" >
-                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g id="verve" fill-rule="nonzero">
+                                    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                                        <g id="verve" fillRule="nonzero">
                                             <circle id="Oval" fill="currentColor" cx="156.26347" cy="215.5" r="115.26347"></circle>
                                             <path d="M156.26347,264.87251 C130.48369,206.43174 111.57857,151.84021 111.57857,151.84021 L72.05384,151.84021 C72.05384,151.84021 96.11071,221.91184 140.79561,309.54065 L171.73134,309.54065 C216.41624,221.91184 240.47311,151.84021 240.47311,151.84021 L200.94837,151.84021 C200.94837,151.84021 182.04325,206.43174 156.26347,264.87251 Z" id="Shape" fill="none"></path>
                                             <path d="M708.04515,257.60566 L630.71641,257.60566 C630.71641,257.60566 632.43441,283.3869 666.80307,283.3869 C683.98685,283.3869 701.17192,278.22677 701.17192,278.22677 L704.60925,305.72097 C704.60925,305.72097 687.42418,312.59491 663.36588,312.59491 C628.99845,312.59491 598.06688,295.41041 598.06688,247.29525 C598.06688,209.48978 622.12375,185.4322 656.4926,185.4322 C708.04515,185.4322 711.48248,236.98469 708.04515,257.60566 Z M654.77471,209.48978 C632.43436,209.48978 630.71641,233.54736 630.71641,233.54736 L678.83158,233.54736 C678.83158,233.54736 677.11363,209.48978 654.77471,209.48978 Z" id="Shape" fill="currentColor"></path>
@@ -51,9 +51,11 @@ function PaymentSection() {
                     </div>
                     <div className="two-col__section">
                         <div className="two-col__item form-control">
-                            <label>Expiry Date</label>
+                            <label htmlFor="year">Expiry Date</label>
                             <input type="text" id="year" />
+                            <span>/</span>
                             <input type="text" id="month" />
+                            <span>/</span>
                             <input type="text" id="day" />
                         </div>
                         <div className="two-col__item form-control">
