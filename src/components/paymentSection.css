@@ -1,0 +1,14 @@
+.payment{
+    background-color: #493F3D;
+}
+.bank-account__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bank-account__item{
+    color: #ffffff;
+}
+.bank-account__item svg{
+    width: 40px;
+}
