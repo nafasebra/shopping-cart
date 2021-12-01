@@ -11,7 +11,7 @@ function PaymentSection() {
             <div className="dote__button"></div>
             <div className="payment">
                 <div className="payment__body">
-                    <h2 className="text-yellow">Card Details</h2>
+                    <h2 className="payment__title">Card Details</h2>
                     <div>
                         <p>Select Card Type</p>
                         <ul className="bank-account__list">

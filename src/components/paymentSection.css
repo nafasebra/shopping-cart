@@ -9,17 +9,24 @@
 .payment{
     height: 100vh;
     background-color: #493F3D;
-    padding: 2rem 3rem;
+    padding: 4rem;
     color: #ffffff;
 }
+.payment__title{
+    color: #F1C40F;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 100;
+}
+
 .bank-account__list{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0;
 }
 .bank-account__item{
     color: #aaaaaa;
-    margin: 0.75rem;
     transition: color 200ms;
 }
 .bank-account__item.active{
@@ -52,7 +59,7 @@
     align-items: center;
 }
 .date__input span{
-    margin: 1rem 1.2rem 0;
+    margin: 1rem 0.5rem 0;
 }
 label{
     padding: 1rem 0;
