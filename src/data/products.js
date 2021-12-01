@@ -1,10 +1,10 @@
 // import uuid for made fake id
 import { v4 as uuidu4 } from 'uuid';
 
-let products = [
+let productsData = [
     {
         id: uuidu4(),
-        productImage: '',
+        productImage: 'https://becomestar.files.wordpress.com/2016/03/jas_2.jpg',
         productName: 'Denim T-Shirt',
         productRef: 'Ref. 00712464',
         productColor: 'Blue',
@@ -13,7 +13,7 @@ let products = [
     },
     {
         id: uuidu4(),
-        productImage: '',
+        productImage: 'https://becomestar.files.wordpress.com/2016/03/jas_2.jpg',
         productName: 'Denim T-Shirt',
         productRef: 'Ref. 00712464',
         productColor: 'Blue',
@@ -22,7 +22,7 @@ let products = [
     },
     {
         id: uuidu4(),
-        productImage: '',
+        productImage: 'https://becomestar.files.wordpress.com/2016/03/jas_2.jpg',
         productName: 'Denim T-Shirt',
         productRef: 'Ref. 00711464',
         productColor: 'Blue',
@@ -31,7 +31,7 @@ let products = [
     },
     {
         id: uuidu4(),
-        productImage: '',
+        productImage: 'https://becomestar.files.wordpress.com/2016/03/jas_2.jpg',
         productName: 'Denim T-Shirt',
         productRef: 'Ref. 00711464',
         productColor: 'Blue',
@@ -40,4 +40,4 @@ let products = [
     },
 ]
 
-export default products;
+export default productsData;

@@ -4,8 +4,7 @@ import React, { useState } from 'react'
 import './cartItem.css';
 
 
-function CartItem() {
-
+function CartItem(props) {
     const [countProduct, setCountProduct] = useState(2);
 
     const increaseCount = () => {
@@ -16,20 +15,31 @@ function CartItem() {
         setCountProduct( countProduct - 1 );
     }
 
+    let {
+        image,
+        name,
+        proRef,
+        color,
+        price
+    } = props;
+
     return (
         <div className="cart__item">
             <div className="bg-gray">
                 <div className="product__img">
-                    <img 
-                        src="https://becomestar.files.wordpress.com/2016/03/jas_2.jpg" 
-                        alt="" 
-                    />
+                    <img src={image} alt="" />
                 </div>
                 <div className="product__title padding-l-2">
-                    <h3 className="product__name">T-Shirt</h3>
-                    <p className="product__ref">Ref. 1254654</p>
+                    <h3 className="product__name">
+                        {name}
+                    </h3>
+                    <p className="product__ref">
+                        {proRef}
+                    </p>
                 </div>
-                <h3 className="padding-l-2">Blue</h3>
+                <h3 className="padding-l-2">
+                    {color}
+                </h3>
                 <div className="set-count__section padding-l-2">
                     <p>{countProduct}</p>
                     <div className="set-count__buttons">
@@ -47,7 +57,9 @@ function CartItem() {
                         </button>
                     </div>
                 </div>
-                <p className="padding-l-2">$30</p>
+                <p className="padding-l-2">
+                    ${price}
+                </p>
             </div>
             <button className="remove">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
