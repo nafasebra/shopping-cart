@@ -8,7 +8,7 @@ import './cartTable.css';
 
 export default function CartTable() {
     return (
-        <div className="card__container">
+        <div className="cart__container">
             {/* i will use map function to display all item */}
             <CartItem />
         </div>

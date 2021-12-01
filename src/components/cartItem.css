@@ -10,8 +10,10 @@
     background-color: #E5E9EA;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1.5rem;
+    width: 90%;
+    flex: 0 0 90%;
 }
 
 .product__img{
@@ -62,4 +64,12 @@
 }
 .btn-gray__rounded svg{
     width: 20px;
+}
+
+.remove{
+    width: 10%;
+    flex: 0 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
