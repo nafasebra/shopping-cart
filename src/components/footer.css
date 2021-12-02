@@ -7,6 +7,7 @@
 .footer__left{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .footer__left svg{
     width: 22px;
