@@ -1,7 +1,6 @@
 .header{
     display: flex;
     align-items: center;
-    padding: 2rem;
 }
 .app-logo img{
     width: 100%;

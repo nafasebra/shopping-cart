@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.footer__left{
+    display: flex;
+    align-items: center;
+}
+.footer__left svg{
+    width: 22px;
+    margin-right: 0.5rem;
+}
+
+.footer__left h4,
+.footer__right h4{
+    margin: 0;
+}
