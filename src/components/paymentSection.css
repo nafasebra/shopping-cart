@@ -11,6 +11,7 @@
     background-color: #493F3D;
     padding: 4rem;
     color: #ffffff;
+    overflow-y: scroll;
 }
 .payment__title{
     color: #F1C40F;

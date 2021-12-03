@@ -5,7 +5,20 @@ import './cartItem.css';
 
 
 function CartItem(props) {
-    const [countProduct, setCountProduct] = useState(2);
+
+    
+    let {
+        image,
+        name,
+        proRef,
+        color,
+        count,
+        price
+    } = props;
+
+
+    const [countProduct, setCountProduct] = useState(count);
+    const [subTotal, setSubTotal] = useState(0);
 
     const increaseCount = () => {
         setCountProduct( countProduct + 1 );
@@ -15,19 +28,11 @@ function CartItem(props) {
         setCountProduct( countProduct - 1 );
     }
 
-    let {
-        image,
-        name,
-        proRef,
-        color,
-        price
-    } = props;
-
     return (
         <div className="cart__item">
             <div className="bg-gray">
                 <div className="product__img">
-                    <img src={image} alt="" />
+                    <img src={image} alt={name} />
                 </div>
                 <div className="product__title padding-l-2">
                     <h3 className="product__name">
