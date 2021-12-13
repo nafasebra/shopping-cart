@@ -3,7 +3,7 @@ import React from 'react'
 // import components
 import Header from './Header';
 import CartTable from './CartTable';
-import Footer from './Footer';
+//import Footer from './Footer';
 
 // import the style of this component
 import './cartSection.css';
@@ -14,8 +14,6 @@ export default function CartSection() {
             <Header />
 
             <CartTable />
-
-            <Footer />
         </div>
     )
 }

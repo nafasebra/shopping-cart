@@ -18,7 +18,6 @@ function CartItem(props) {
 
 
     const [countProduct, setCountProduct] = useState(count);
-    const [subTotal, setSubTotal] = useState(0);
 
     const increaseCount = () => {
         setCountProduct( countProduct + 1 );
