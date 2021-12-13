@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 // import the style of this component
 import './footer.css';
 
-export default function Footer() {
+// context
+import SubtotalContext from '../context/SubtotalContext';
+
+
+function Footer() {
+    let stContext = useContext(SubtotalContext);
+
     return (
         <div className="footer">
             <div className="footer__left">
@@ -12,9 +18,11 @@ export default function Footer() {
             </div>
             <div className="footer__right">
                 <h4>
-                    Subtotal: $50
+                    Subtotal: ${stContext.subtotal}
                 </h4>
             </div>
         </div>
     )
 }
+
+export default Footer;

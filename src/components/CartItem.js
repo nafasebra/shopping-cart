@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 // import the style of this component
 import './cartItem.css';
 
+// context
+import SubtotalContext from '../context/SubtotalContext';
+
 
 function CartItem(props) {
-
     
     let {
         image,
@@ -16,6 +18,7 @@ function CartItem(props) {
         price
     } = props;
 
+    let {subtotal, setSubtotal} = useContext(SubtotalContext);
 
     const [countProduct, setCountProduct] = useState(count);
 
@@ -26,6 +29,11 @@ function CartItem(props) {
         if(countProduct === 1) return;
         setCountProduct( countProduct - 1 );
     }
+
+    // console.log(subtotal);
+    // console.log(price);
+    // console.log(subtotal + price);
+    setSubtotal(subtotal + price);
 
     return (
         <div className="cart__item">
