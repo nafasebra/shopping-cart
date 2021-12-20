@@ -6,6 +6,14 @@ import './paymentSection.css';
 function PaymentSection() {
     const [ bankAccount, setBankAccount ] = useState('visa');
 
+    function inputOnlyNumber(e) {
+        let ASCIICode = (e.which) ? e.which : e.keyCode;
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)){
+            return false;
+        }
+        return true;
+    }
+
     return (
         <div className="payment__container">
             <div className="dote__button"></div>
@@ -16,11 +24,13 @@ function PaymentSection() {
                         <p>Select Card Type</p>
                         <ul className="bank-account__list">
                             <li className={`bank-account__item ${bankAccount === 'visa' && "active"}`}
-                                onClick={() => setBankAccount('visa')}>
+                                onClick={() => setBankAccount('visa')}
+                            >
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.732 141.732"><g fill="currentColor"><path d="M62.935 89.571h-9.733l6.083-37.384h9.734zM45.014 52.187L35.735 77.9l-1.098-5.537.001.002-3.275-16.812s-.396-3.366-4.617-3.366h-15.34l-.18.633s4.691.976 10.181 4.273l8.456 32.479h10.141l15.485-37.385H45.014zM121.569 89.571h8.937l-7.792-37.385h-7.824c-3.613 0-4.493 2.786-4.493 2.786L95.881 89.571h10.146l2.029-5.553h12.373l1.14 5.553zm-10.71-13.224l5.114-13.99 2.877 13.99h-7.991zM96.642 61.177l1.389-8.028s-4.286-1.63-8.754-1.63c-4.83 0-16.3 2.111-16.3 12.376 0 9.658 13.462 9.778 13.462 14.851s-12.075 4.164-16.06.965l-1.447 8.394s4.346 2.111 10.986 2.111c6.642 0 16.662-3.439 16.662-12.799 0-9.72-13.583-10.625-13.583-14.851.001-4.227 9.48-3.684 13.645-1.389z"/></g><path d="M34.638 72.364l-3.275-16.812s-.396-3.366-4.617-3.366h-15.34l-.18.633s7.373 1.528 14.445 7.253c6.762 5.472 8.967 12.292 8.967 12.292z" fill="currentColor"/><path fill="none" d="M0 0h141.732v141.732H0z"/></svg>
                             </li>
                             <li className={`bank-account__item ${bankAccount === 'mastercard' && "active"}`}
-                                onClick={() => setBankAccount('mastercard')}>
+                                onClick={() => setBankAccount('mastercard')}
+                            >
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152.407 108">
                                     <rect x="60.4117" y="25.6968" width="31.5" height="56.6064" fill="currentColor"/>
                                     <path d="M382.20839,306a35.9375,35.9375,0,0,1,13.7499-28.3032,36,36,0,1,0,0,56.6064A35.938,35.938,0,0,1,382.20839,306Z" transform="translate(-319.79649 -252)" fill="currentColor"/>
@@ -29,7 +39,8 @@ function PaymentSection() {
                                 </svg>
                             </li>
                             <li className={`bank-account__item ${bankAccount === 'verve' && "active"}`}
-                                onClick={() => setBankAccount('verve')}>
+                                onClick={() => setBankAccount('verve')}
+                            >
                                 <svg viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" >
                                     <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                                         <g id="verve" fillRule="nonzero">
@@ -47,22 +58,57 @@ function PaymentSection() {
                     </div>
                     <div className="form-control">
                         <label htmlFor="cardNumber">Card Number</label>
-                        <input type="text" id="cardNumber" />
+                        <input 
+                            type="text" 
+                            id="cardNumber" 
+                            maxLength={16}
+                            onKeyPress={(e) => {
+                                return inputOnlyNumber(e);
+                            }}
+                        />
                     </div>
-                    <div className="row">
+                    <div className="row little-inputs">
                         <div className="two-col__item form-control">
                             <label htmlFor="year">Expiry Date</label>
                             <div className="date__input">
-                                <input type="text" id="year" />
+                                <input 
+                                    type="text" 
+                                    id="year" 
+                                    maxLength={2} 
+                                    onKeyPress={(e) => {
+                                        return inputOnlyNumber(e);
+                                    }}
+                                />
                                 <span>/</span>
-                                <input type="text" id="month" />
+                                <input 
+                                    type="text" 
+                                    id="month" 
+                                    maxLength={2} 
+                                    onKeyPress={(e) => {
+                                        return inputOnlyNumber(e);
+                                    }}
+                                />
                                 <span>/</span>
-                                <input type="text" id="day" />
+                                <input 
+                                    type="text" 
+                                    id="day" 
+                                    maxLength={2} 
+                                    onKeyPress={(e) => {
+                                        return inputOnlyNumber(e);
+                                    }}
+                                />
                             </div>
                         </div>
                         <div className="two-col__item form-control">
                             <label htmlFor="cvv" >CVV</label>
-                            <input type="text" id="cvv" />
+                            <input 
+                                type="text" 
+                                id="cvv" 
+                                maxLength={3} 
+                                onKeyPress={(e) => {
+                                    return inputOnlyNumber(e);
+                                }}
+                            />
                         </div>
                     </div>
                 </div>

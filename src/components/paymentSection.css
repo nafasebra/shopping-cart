@@ -48,12 +48,19 @@
 .two-col__item{
     margin: 0 0.5rem;
 }
+.little-inputs input{
+    font-size: 1.2rem;
+    text-align: center;
+}
 .form-control{
     display: flex;
     flex-direction: column;
 }
 .form-control input{
-    border-bottom: 1px solid #ffffff;   
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
 }
 .date__input{
     display: flex;
