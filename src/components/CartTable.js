@@ -17,7 +17,10 @@ function CartTable() {
 
     return (
         <div className="cart__container">
-            <SubtotalContext.Provider value={{subtotal, setSubtotal}}>
+            <SubtotalContext.Provider value={{
+                subtotal: subtotal, 
+                setSubtotal: setSubtotal
+            }}>
                 {
                     productsData.map(item => <CartItem 
                             key={item.id} 

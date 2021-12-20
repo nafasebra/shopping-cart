@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 // import the style of this component
 import './cartItem.css';
@@ -23,17 +23,33 @@ function CartItem(props) {
     const [countProduct, setCountProduct] = useState(count);
 
     const increaseCount = () => {
+        increaseSubtotal();
         setCountProduct( countProduct + 1 );
     }
     const decreaseCount = () => {
         if(countProduct === 1) return;
+        desreaseSubtotal();
         setCountProduct( countProduct - 1 );
     }
 
-    // console.log(subtotal);
-    // console.log(price);
-    // console.log(subtotal + price);
-    setSubtotal(subtotal + price);
+    const initSubtotal = () => {
+        // setSubtotal(subtotal + (price * count));
+
+        setSubtotal(prevState => {
+            return prevState + (price * count)
+        })
+    }
+    
+    const increaseSubtotal = () => {
+        setSubtotal(subtotal + price);
+    }
+    const desreaseSubtotal = () => {
+        setSubtotal(subtotal - price);
+    }
+
+    useEffect(() => {
+        initSubtotal();
+    }, []);
 
     return (
         <div className="cart__item">
