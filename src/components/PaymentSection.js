@@ -6,18 +6,18 @@ import './paymentSection.css';
 function PaymentSection() {
     const [ bankAccount, setBankAccount ] = useState('visa');
 
-    const [cardNumber, setCardNumber] = useState(0);
-    const [yearDate, setYearDate] = useState(0);
-    const [monthDate, setMonthDate] = useState(0);
-    const [dayDate, setDayDate] = useState(0);
-    const [cvv2Number, setCvv2Number] = useState(0);
+    const [cardNumber, setCardNumber] = useState();
+    const [yearDate, setYearDate] = useState();
+    const [monthDate, setMonthDate] = useState();
+    const [dayDate, setDayDate] = useState();
+    const [cvv2Number, setCvv2Number] = useState();
     
 
-    const changeCardNumber = (evet) => {
+    const storeOnlyNumber = (evet, callback) => {
         let regex = /^[0-9]*$/;
         let value = evet.target.value;
 
-        value.match(regex) && setCardNumber(value);
+        value.match(regex) && callback(value);
     }
 
     return (
@@ -69,7 +69,7 @@ function PaymentSection() {
                             id="cardNumber" 
                             maxLength={16}
                             value={cardNumber}
-                            onChange={(e) => changeCardNumber(e)}
+                            onChange={(e) => storeOnlyNumber(e, setCardNumber.bind(this))}
                         />
                     </div>
                     <div className="row little-inputs">
@@ -81,6 +81,7 @@ function PaymentSection() {
                                     id="year" 
                                     maxLength={2} 
                                     value={yearDate}
+                                    onChange={(e) => storeOnlyNumber(e, setYearDate.bind(this))}
                                 />
                                 <span>/</span>
                                 <input 
@@ -88,6 +89,7 @@ function PaymentSection() {
                                     id="month" 
                                     maxLength={2} 
                                     value={monthDate}
+                                    onChange={(e) => storeOnlyNumber(e, setMonthDate.bind(this))}
                                 />
                                 <span>/</span>
                                 <input 
@@ -95,6 +97,7 @@ function PaymentSection() {
                                     id="day" 
                                     maxLength={2} 
                                     value={dayDate}
+                                    onChange={(e) => storeOnlyNumber(e, setDayDate.bind(this))}
                                 />
                             </div>
                         </div>
@@ -104,7 +107,8 @@ function PaymentSection() {
                                 type="text" 
                                 id="cvv" 
                                 maxLength={3} 
-                                onChange={cvv2Number}
+                                value={cvv2Number}
+                                onChange={(e) => storeOnlyNumber(e, setCvv2Number.bind(this))}
                             />
                         </div>
                     </div>
