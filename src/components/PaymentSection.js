@@ -6,12 +6,18 @@ import './paymentSection.css';
 function PaymentSection() {
     const [ bankAccount, setBankAccount ] = useState('visa');
 
-    function inputOnlyNumber(e) {
-        let ASCIICode = (e.which) ? e.which : e.keyCode;
-        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)){
-            return false;
-        }
-        return true;
+    const [cardNumber, setCardNumber] = useState(0);
+    const [yearDate, setYearDate] = useState(0);
+    const [monthDate, setMonthDate] = useState(0);
+    const [dayDate, setDayDate] = useState(0);
+    const [cvv2Number, setCvv2Number] = useState(0);
+    
+
+    const changeCardNumber = (evet) => {
+        let regex = /^[0-9]*$/;
+        let value = evet.target.value;
+
+        value.match(regex) && setCardNumber(value);
     }
 
     return (
@@ -62,9 +68,8 @@ function PaymentSection() {
                             type="text" 
                             id="cardNumber" 
                             maxLength={16}
-                            onKeyPress={(e) => {
-                                return inputOnlyNumber(e);
-                            }}
+                            value={cardNumber}
+                            onChange={(e) => changeCardNumber(e)}
                         />
                     </div>
                     <div className="row little-inputs">
@@ -75,27 +80,21 @@ function PaymentSection() {
                                     type="text" 
                                     id="year" 
                                     maxLength={2} 
-                                    onKeyPress={(e) => {
-                                        return inputOnlyNumber(e);
-                                    }}
+                                    value={yearDate}
                                 />
                                 <span>/</span>
                                 <input 
                                     type="text" 
                                     id="month" 
                                     maxLength={2} 
-                                    onKeyPress={(e) => {
-                                        return inputOnlyNumber(e);
-                                    }}
+                                    value={monthDate}
                                 />
                                 <span>/</span>
                                 <input 
                                     type="text" 
                                     id="day" 
                                     maxLength={2} 
-                                    onKeyPress={(e) => {
-                                        return inputOnlyNumber(e);
-                                    }}
+                                    value={dayDate}
                                 />
                             </div>
                         </div>
@@ -105,9 +104,7 @@ function PaymentSection() {
                                 type="text" 
                                 id="cvv" 
                                 maxLength={3} 
-                                onKeyPress={(e) => {
-                                    return inputOnlyNumber(e);
-                                }}
+                                onChange={cvv2Number}
                             />
                         </div>
                     </div>

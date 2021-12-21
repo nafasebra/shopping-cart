@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 // import the style of this component
 import './cartItem.css';
 
-// context
+// import the subtotal context
 import SubtotalContext from '../context/SubtotalContext';
 
 
@@ -33,8 +33,6 @@ function CartItem(props) {
     }
 
     const initSubtotal = () => {
-        // setSubtotal(subtotal + (price * count));
-
         setSubtotal(prevState => {
             return prevState + (price * count)
         })
@@ -47,6 +45,7 @@ function CartItem(props) {
         setSubtotal(subtotal - price);
     }
 
+    // component did mount only once
     useEffect(() => {
         initSubtotal();
     }, []);
