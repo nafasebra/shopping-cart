@@ -1,10 +1,13 @@
 // import uuid for made fake id
 import { v4 as uuidu4 } from 'uuid';
+import img1 from '../assets/img1.jpg';
+import img2 from '../assets/img2.jpg';
+import img3 from '../assets/img3.jpg';
 
 let productsData = [
     {
         id: uuidu4(),
-        productImage: 'https://becomestar.files.wordpress.com/2016/03/jas_2.jpg',
+        productImage: img1,
         productName: 'Denim T-Shirt',
         productRef: 'Ref. 00712464',
         productColor: 'Blue',
@@ -13,7 +16,7 @@ let productsData = [
     },
     {
         id: uuidu4(),
-        productImage: 'https://becomestar.files.wordpress.com/2016/03/jas_2.jpg',
+        productImage: img2,
         productName: 'Denim T-Shirt',
         productRef: 'Ref. 00712464',
         productColor: 'Blue',
@@ -22,7 +25,7 @@ let productsData = [
     },
     {
         id: uuidu4(),
-        productImage: 'https://becomestar.files.wordpress.com/2016/03/jas_2.jpg',
+        productImage: img3,
         productName: 'Denim T-Shirt',
         productRef: 'Ref. 00711464',
         productColor: 'Blue',
@@ -31,7 +34,7 @@ let productsData = [
     },
     {
         id: uuidu4(),
-        productImage: 'https://becomestar.files.wordpress.com/2016/03/jas_2.jpg',
+        productImage: img1,
         productName: 'Denim T-Shirt',
         productRef: 'Ref. 00711464',
         productColor: 'Blue',
