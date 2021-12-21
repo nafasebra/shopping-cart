@@ -18,3 +18,9 @@
 .footer__right h4{
     margin: 0;
 }
+
+@media (max-width: 556px){
+    .footer{
+        padding: 1.5rem 1rem 1rem ;
+    }
+}

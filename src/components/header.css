@@ -17,3 +17,10 @@
     color: #454545;
     font-size: 1.5rem;
 }
+
+@media (max-width: 556px){
+    .app-header,
+    .vertical-seperator{
+        display: none;
+    }
+}

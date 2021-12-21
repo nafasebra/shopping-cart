@@ -11,7 +11,7 @@
     background-color: #493F3D;
     padding: 4rem;
     color: #ffffff;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .payment__title{
     color: #F1C40F;
@@ -49,7 +49,7 @@
     margin: 0 0.5rem;
 }
 .little-inputs input{
-    font-size: 1.2rem;
+    font-size: 1.3rem !important;
     text-align: center;
 }
 .form-control{
@@ -84,4 +84,14 @@ label{
     color: #353535;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+@media (max-width: 556px){
+    .payment__container{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .dot__button{
+        display: none;
+    }
 }

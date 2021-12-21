@@ -27,3 +27,11 @@ button:focus{
 button:hover{
   cursor: pointer;
 }
+
+@media (max-width: 556px){
+  .app{
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
