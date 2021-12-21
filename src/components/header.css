@@ -18,7 +18,7 @@
     font-size: 1.5rem;
 }
 
-@media (max-width: 556px){
+@media (max-width: 765px){
     .app-header,
     .vertical-seperator{
         display: none;

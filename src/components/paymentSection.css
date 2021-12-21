@@ -86,12 +86,29 @@ label{
     font-weight: 600;
 }
 
-@media (max-width: 556px){
+@media (max-width: 980px){
     .payment__container{
         flex: 0 0 100%;
         width: 100%;
     }
     .dot__button{
         display: none;
+    }
+    .payment{
+        padding: 5rem 5rem 10rem 5rem;
+        height: auto;
+    }
+}
+@media (max-width: 765px){
+    .payment{
+        padding: 2rem 1.5rem 10rem;
+    }
+    .bank-account__item svg{
+        width: 70px;
+    }
+}
+@media (max-width: 330px){
+    .payment{
+        padding: 2rem 1.5rem 10rem 1.5rem;
     }
 }

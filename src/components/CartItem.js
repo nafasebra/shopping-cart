@@ -64,7 +64,7 @@ function CartItem(props) {
                         {proRef}
                     </p>
                 </div>
-                <h3 className="padding-l-2">
+                <h3 className="product__color padding-l-2">
                     {color}
                 </h3>
                 <div className="set-count__section padding-l-2">

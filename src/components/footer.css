@@ -19,8 +19,17 @@
     margin: 0;
 }
 
-@media (max-width: 556px){
+@media (max-width: 765px){
     .footer{
         padding: 1.5rem 1rem 1rem ;
+    }
+}
+@media (max-width: 330px){
+    .footer{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .footer__right h4{
+        padding-bottom: 1rem;
     }
 }
