@@ -59,7 +59,7 @@
 .form-control input{
     border-bottom: 1px solid #ffffff;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     letter-spacing: 0.15rem;
 }
 .date__input{
@@ -70,7 +70,7 @@
     margin: 1rem 0.5rem 0;
 }
 label{
-    padding: 1rem 0;
+    padding: 1.5rem 0 0.5rem;
 }
 
 .payment__button{

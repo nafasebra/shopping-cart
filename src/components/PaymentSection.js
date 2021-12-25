@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 // import the style of this component
 import './paymentSection.css';
@@ -12,6 +12,8 @@ function PaymentSection() {
     const [monthDate, setMonthDate] = useState();
     const [dayDate, setDayDate] = useState();
     const [cvv2Number, setCvv2Number] = useState();
+
+    const txtCardNumber = useRef();
     
     const storeOnlyNumber = (evet, callback) => {
         let value = evet.target.value;
@@ -19,6 +21,21 @@ function PaymentSection() {
 
         value.match(regex) && callback(value);
     }
+
+    const maskInputCardNumber = () => {
+        const cardValue = txtCardNumber.current.value.replace(/\D/g, '')
+        .match(/(\d{0,4})(\d{0,4})(\d{0,4})(\d{0,4})/);
+
+        txtCardNumber.current.value = !cardValue[2]
+        ? cardValue[1] : `${cardValue[1]}-${cardValue[2]}${(`${cardValue[3] ? `-${cardValue[3]}` : ''}`)}${(`${cardValue[4] ? `-${cardValue[4]}` : ''}`)}`;
+
+        const number = txtCardNumber.current.value.replace(/(\D)/g, '');
+        setCardNumber(number);
+    }
+
+    useEffect(() => {
+        maskInputCardNumber();
+    }, [cardNumber])
 
     return (
         <div className="payment__container">
@@ -67,10 +84,10 @@ function PaymentSection() {
                             <label htmlFor="cardNumber">Card Number</label>
                             <input 
                                 type="text" 
-                                id="cardNumber" 
-                                maxLength={16}
-                                value={cardNumber}
-                                onChange={(e) => storeOnlyNumber(e, setCardNumber.bind(this))}
+                                // maxLength={16}
+                                // value={cardNumber}
+                                ref={txtCardNumber}
+                                onChange={() => maskInputCardNumber()}
                             />
                         </div>
                         <div className="row little-inputs">

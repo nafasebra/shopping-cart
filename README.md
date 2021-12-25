@@ -1,6 +1,12 @@
 ## Shopping cart
 
-Designed image : https://www.behance.net/gallery/57779427/Shopping-Cart-UI
+Designed template image : https://www.behance.net/gallery/57779427/Shopping-Cart-UI
+
+Featue:
+- count down and up for set count of product
+- subtotal (price all product)
+- responsive page
+- 
 
 
 ## Available Scripts
