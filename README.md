@@ -1,12 +1,17 @@
 ## Shopping cart
 
+Hi :)
+I decided that below designed template convert to code (react app)
+
 Designed template image : https://www.behance.net/gallery/57779427/Shopping-Cart-UI
 
 Featue:
-- count down and up for set count of product
-- subtotal (price all product)
-- responsive page
-- 
+- set count down and up for set count of product
+- calculate of subtotal (price all product)
+- responsive
+- use context
+- masking of Card number input
+- ...
 
 
 ## Available Scripts
@@ -46,3 +51,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+<br />
+
+by @nafasebra
+created by ❤
